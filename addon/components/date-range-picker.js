@@ -95,8 +95,7 @@ export default Ember.Component.extend({
       alwaysShowCalendars: this.get('alwaysShowCalendars'),
       autoUpdateInput: this.get('autoUpdateInput'),
       autoApply: this.get('autoApply'),
-      locale: {
-        applyLabel: this.get('applyLabel'),
+      locale: this.get('locale') || {
         cancelLabel: this.get('cancelLabel'),
         customRangeLabel: this.get('customRangeLabel'),
         fromLabel: this.get('fromLabel'),
