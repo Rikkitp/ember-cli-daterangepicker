@@ -31,7 +31,7 @@ export default Ember.Component.extend({
     let serverFormat = this.get('serverFormat');
     let start = this.get('start');
     let end = this.get('end');
-    if (!isEmpty(start) && !isEmpty(end)) {
+    if (!isEmpty(start) && !isEmpty(end) && moment(start, serverFormat).isValid() && moment(end, serverFormat).isValid()) {
       return moment(start, serverFormat).format(format) + this.get('separator') +
         moment(end, serverFormat).format(format);
     }
